@@ -605,31 +605,7 @@ function MainApp({ profile, setProfile, t, lang, setLang }) {
   const [tab, setTab] = useState("Log");
   const [shifts, setShifts] = useState(() => {
     try { const s = JSON.parse(localStorage.getItem(STORAGE_KEY)); if (s && s.length > 0) return s; } catch {}
-    return [
-      { id: 1, date: "2026-01-20", start: "11:00", end: "17:00", hours: 6, rate: TIPPED_MIN, tips: 58, source: "manual" },
-      { id: 2, date: "2026-01-21", start: "16:00", end: "23:00", hours: 7, rate: TIPPED_MIN, tips: 112.5, source: "manual" },
-      { id: 3, date: "2026-01-22", start: "11:00", end: "16:00", hours: 5, rate: TIPPED_MIN, tips: 42, source: "scan" },
-      { id: 4, date: "2026-01-23", start: "16:00", end: "23:30", hours: 7.5, rate: TIPPED_MIN, tips: 134, source: "manual" },
-      { id: 5, date: "2026-01-24", start: "16:00", end: "00:00", hours: 8, rate: TIPPED_MIN, tips: 187.5, source: "scan" },
-      { id: 6, date: "2026-01-25", start: "10:00", end: "17:00", hours: 7, rate: TIPPED_MIN, tips: 195, source: "manual" },
-      { id: 7, date: "2026-01-27", start: "16:00", end: "23:00", hours: 7, rate: TIPPED_MIN, tips: 98, source: "manual" },
-      { id: 8, date: "2026-01-28", start: "11:00", end: "17:00", hours: 6, rate: TIPPED_MIN, tips: 51, source: "scan" },
-      { id: 9, date: "2026-01-29", start: "16:00", end: "23:00", hours: 7, rate: TIPPED_MIN, tips: 125, source: "manual" },
-      { id: 10, date: "2026-01-30", start: "16:00", end: "00:30", hours: 8.5, rate: TIPPED_MIN, tips: 142, source: "manual" },
-      { id: 11, date: "2026-01-31", start: "16:00", end: "01:00", hours: 9, rate: TIPPED_MIN, tips: 210, source: "scan" },
-      { id: 12, date: "2026-02-01", start: "10:00", end: "18:00", hours: 8, rate: TIPPED_MIN, tips: 178, source: "manual" },
-      { id: 13, date: "2026-02-03", start: "16:00", end: "22:00", hours: 6, rate: TIPPED_MIN, tips: 72, source: "manual" },
-      { id: 14, date: "2026-02-04", start: "11:00", end: "16:00", hours: 5, rate: TIPPED_MIN - 0.65, tips: 28, source: "scan" },
-      { id: 15, date: "2026-02-05", start: "16:00", end: "23:00", hours: 7, rate: TIPPED_MIN, tips: 108, source: "manual" },
-      { id: 16, date: "2026-02-06", start: "16:00", end: "01:00", hours: 9, rate: TIPPED_MIN, tips: 165, source: "manual" },
-      { id: 17, date: "2026-02-07", start: "10:00", end: "18:00", hours: 8, rate: TIPPED_MIN, tips: 192, source: "scan" },
-      { id: 18, date: "2026-02-09", start: "11:00", end: "16:00", hours: 5, rate: TIPPED_MIN, tips: 31, source: "manual" },
-      { id: 19, date: "2026-02-10", start: "16:00", end: "23:00", hours: 7, rate: TIPPED_MIN, tips: 119, source: "manual" },
-      { id: 20, date: "2026-02-11", start: "11:00", end: "17:00", hours: 6, rate: TIPPED_MIN, tips: 55, source: "scan" },
-      { id: 21, date: "2026-02-12", start: "16:00", end: "23:30", hours: 7.5, rate: TIPPED_MIN, tips: 148, source: "manual" },
-      { id: 22, date: "2026-02-13", start: "16:00", end: "01:00", hours: 9, rate: TIPPED_MIN, tips: 225, source: "manual" },
-      { id: 23, date: "2026-02-14", start: "10:00", end: "22:00", hours: 12, rate: TIPPED_MIN, tips: 310, source: "scan" },
-    ];
+    return [];
   });
   const [uploads, setUploads] = useState(() => {
     try { const s = JSON.parse(localStorage.getItem(UPLOADS_KEY)); if (s && s.length > 0) return s; } catch {} return [];
